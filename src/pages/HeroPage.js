@@ -56,102 +56,106 @@ const HeroPage = () => {
     return result.isConfirmed;
   };
 
-    return (
-            <div className={styles.hero_wrapper}>
-              {changeHero ? (
-                      <>
-                        <div className={styles.container_btn}>
-                          <button className={`${styles.btn} ${styles.change}`} onClick={() => setChangeHero(false)}>
-                            Cancel
-                          </button>
-                        </div>
-                        <UpdateHero heroes={heroes} id={id} />
-                      </>
-              ) : (
-                      <>
-                        <div className={styles.container_btn}>
-                          <button className={`${styles.btn} ${styles.change}`} onClick={() => setChangeHero(true)}>
-                            Change
-                          </button>
-                          <button className={`${styles.btn} ${styles.delete}`} onClick={handleDelete}>
-                            Delete
-                          </button>
-                        </div>
+  return (
+          <div className={styles.hero_wrapper}>
+            {changeHero ? (
+                    <>
+                      <div className={styles.container_btn}>
+                        <button className={`${styles.btn} ${styles.change}`} onClick={() => setChangeHero(false)}>
+                          Cancel
+                        </button>
+                      </div>
+                      <UpdateHero heroes={heroes} id={id} />
+                    </>
+            ) : (
+                    <>
+                      <div className={styles.container_btn}>
+                        <button className={`${styles.btn} ${styles.change}`} onClick={() => setChangeHero(true)}>
+                          Change
+                        </button>
+                        <button className={`${styles.btn} ${styles.delete}`} onClick={handleDelete}>
+                          Delete
+                        </button>
+                      </div>
 
-                        <h2 className={styles.hero_name}>{heroes.nickname}</h2>
+                      <h2 className={styles.hero_name}>{heroes.nickname}</h2>
 
-                        <div className={styles.wrapper__info_hero}>
-                          {heroes.SuperheroImages.length > 0 ? (
-                                  <img
-                                          className={styles.main_hero_img}
-                                          src={
-                                            process.env.REACT_APP_DEMO_MODE
-                                                    ?`${process.env.REACT_APP_API_URL_DEFAULT_DATA}${heroes.SuperheroImages[0].image}`
-                                                    : `${process.env.REACT_APP_API_URL}${heroes.SuperheroImages[0].image}`
-                                          || NoPhoto}
-                                          alt="Hero"
-                                  />
+                      <div className={styles.wrapper__info_hero}>
+                        {heroes.SuperheroImages.length > 0 ? (
+                                <img
+                                        className={styles.main_hero_img}
+                                        src={
+                                          process.env.REACT_APP_DEMO_MODE
+                                                  ?`${heroes.SuperheroImages[0].image}`
+                                                  : `${process.env.REACT_APP_API_URL}${heroes.SuperheroImages[0].image}`}
+                                        alt="Hero"
+                                />
 
-                            ) : (
-                                  <p>Without Images</p>
-                          )}
+                        ) : (
+                                <img
+                                        className={styles.hero__img}
+                                        src={NoPhoto}
+                                        alt="Hero"
+                                />
 
-                          <div className={styles.info_hero}>
-                            <h2 className={`${styles.label}`}>
-                              Real name:
-                            </h2>
-                            <p>{heroes.real_name}</p>
-                            <h2 className={styles.label}>
-                              Catch phrase:
-                            </h2>
-                            <p>{heroes.catch_phrase}</p>
-                          </div>
-                        </div>
+                        )}
 
                         <div className={styles.info_hero}>
-                          <h2 className={styles.label}>Superpowers:</h2>
-                            {heroes.listSuperpowers.length > 0 ? (
-                                    heroes.listSuperpowers.map((listSuperpower) => (
-                                            <div className={styles.superpower_item} key={listSuperpower.id}>
-                                              <p>{listSuperpower.titleSuperpower}</p>
-                                            </div>
-                                    ))
-                            ) : (
-                                    <>Without Superpowers</>
-                            )}
-                          <h2 className={styles.label}>
-                            Origin description:
+                          <h2 className={`${styles.label}`}>
+                            Real name:
                           </h2>
-                          <p>{heroes.origin_description}</p>
+                          <p>{heroes.real_name}</p>
                           <h2 className={styles.label}>
-                            Achievement:
+                            Catch phrase:
                           </h2>
-                          <p>{heroes.superpowers}</p>
+                          <p>{heroes.catch_phrase}</p>
                         </div>
-                        <h2 className={styles.label}>Images:</h2>
-                        <div className={styles.gallery}>
-                          {heroes.SuperheroImages.length > 1 ? (
-                                  heroes.SuperheroImages.map((itemImg) => (
-                                          <div key={itemImg.id}>
-                                            <img
-                                                    src={
-                                                      process.env.REACT_APP_DEMO_MODE
-                                                              ? `${process.env.REACT_APP_API_URL_DEFAULT_DATA}${itemImg.image}`
-                                                              : `${process.env.REACT_APP_API_URL}${itemImg.image}`
-                                                    }
-                                                    alt="Hero"
-                                            />
-                                          </div>
-                                  ))
-                          ) : (
-                                  <p>Without Images</p>
-                          )}
-                        </div>
-                      </>
-              )}
-            </div>
+                      </div>
 
-    );
+                      <div className={styles.info_hero}>
+                        <h2 className={styles.label}>Superpowers:</h2>
+                        {heroes.listSuperpowers.length > 0 ? (
+                                heroes.listSuperpowers.map((listSuperpower) => (
+                                        <div className={styles.superpower_item} key={listSuperpower.id}>
+                                          <p>{listSuperpower.titleSuperpower}</p>
+                                        </div>
+                                ))
+                        ) : (
+                                <>Without Superpowers</>
+                        )}
+                        <h2 className={styles.label}>
+                          Origin description:
+                        </h2>
+                        <p>{heroes.origin_description}</p>
+                        <h2 className={styles.label}>
+                          Achievement:
+                        </h2>
+                        <p>{heroes.superpowers}</p>
+                      </div>
+                      <h2 className={styles.label}>Images:</h2>
+                      <div className={styles.gallery}>
+                        {heroes.SuperheroImages.length > 1 ? (
+                                heroes.SuperheroImages.map((itemImg) => (
+                                        <div key={itemImg.id}>
+                                          <img
+                                                  src={
+                                                    process.env.REACT_APP_DEMO_MODE
+                                                            ? `${itemImg.image}`
+                                                            : `${process.env.REACT_APP_API_URL}${itemImg.image}`
+                                                  }
+                                                  alt="Hero"
+                                          />
+                                        </div>
+                                ))
+                        ) : (
+                                <p>Without Images</p>
+                        )}
+                      </div>
+                    </>
+            )}
+          </div>
+
+  );
 };
 
 export default HeroPage;

@@ -8,7 +8,7 @@ import { ToastContainer } from "react-toastify";
 
 const App = observer(() => {
     return (
-            <BrowserRouter >
+            <BrowserRouter basename="/superheroes-frontend">
                 <div className="layout">
                     <NavBar />
                     <main >

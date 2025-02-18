@@ -77,6 +77,10 @@
   align-items: center;
 }
 
+.hero__img {
+  filter: drop-shadow(0px 0px 10px var(--border-color));
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
