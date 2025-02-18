@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/superheroes-frontend/static/css/main.34749c43.css",
-    "main.js": "/superheroes-frontend/static/js/main.d7fb2a44.js",
+    "main.js": "/superheroes-frontend/static/js/main.59348fa5.js",
     "static/media/image1.webp": "/superheroes-frontend/static/media/image1.8a2c76a87a836b2ac8a8.webp",
     "static/media/image7.webp": "/superheroes-frontend/static/media/image7.f59833add82eb53ebea0.webp",
     "static/media/image6.webp": "/superheroes-frontend/static/media/image6.3380889d353d031c4143.webp",
@@ -14,10 +14,10 @@
     "static/media/L.webp": "/superheroes-frontend/static/media/L.90e3e549caf16f41e14a.webp",
     "index.html": "/superheroes-frontend/index.html",
     "main.34749c43.css.map": "/superheroes-frontend/static/css/main.34749c43.css.map",
-    "main.d7fb2a44.js.map": "/superheroes-frontend/static/js/main.d7fb2a44.js.map"
+    "main.59348fa5.js.map": "/superheroes-frontend/static/js/main.59348fa5.js.map"
   },
   "entrypoints": [
     "static/css/main.34749c43.css",
-    "static/js/main.d7fb2a44.js"
+    "static/js/main.59348fa5.js"
   ]
 }
