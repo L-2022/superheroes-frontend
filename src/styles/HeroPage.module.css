@@ -1,0 +1,133 @@
+.hero_wrapper {
+  color: var(--text-primary);
+}
+
+.hero_name {
+  text-align: center;
+  font-size: var(--font-size-heading);
+  color: var(--gradient-superpower-item);
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--shadow-primary);
+  font-family: var(--font-primary);
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.wrapper__info_hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.main_hero_img {
+  width: 100%;
+  /*max-height: 30vh;*/
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.info_hero {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 30%;
+}
+.info_hero >p {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.label {
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+}
+
+.label .short {
+  padding: 5px 0;
+}
+
+.label {
+  text-align: justify;
+}
+
+.superpower_item > p{
+  font-size: var(--font-size-small);
+}
+
+.list_superpowers {
+  padding: 2px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.superpower_item {
+  padding: 2px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  /*border: 1px solid var(--gradient-superpower-item);*/
+  /*background: var(--gradient-superpower-item);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-small);
+}
+
+.gallery img {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.container_btn {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  margin: var(--spacing-small);
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-weight: 600;
+}
+
+.btn {
+  color: var(--text-primary);
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--color-blue-light);
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn .change {
+  height: 40px;
+}
+
+.btn.delete {
+  background-color: var(--color-red-dark);
+}
+
+.btn:hover {
+  color: var(--text-primary-inv);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
